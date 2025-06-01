@@ -11,7 +11,10 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
-  return (
+  // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
+    return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -26,20 +29,31 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
+      {/*<Tabs.Screen*/}
+      {/*  name="index"*/}
+      {/*  options={{*/}
+      {/*    title: 'Home',*/}
+      {/*    tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,*/}
+      {/*  }}*/}
+      {/*/>*/}
+      {/*<Tabs.Screen*/}
+      {/*  name="explore"*/}
+      {/*  options={{*/}
+      {/*    title: 'Explore',*/}
+      {/*    tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,*/}
+      {/*  }}*/}
+      {/*/>*/}
+        <Tabs.Screen
+            name="index"
+            options={{
+                tabBarItemStyle: {display: "none"},
+                title: 'Index',
+                tabBarStyle: {display: "none"},
+                // @ts-ignore
+                // href: '/auth'
+            }}
+        />
     </Tabs>
   );
 }
+
