@@ -20,15 +20,13 @@ export default function Auth() {
     const [formData, setFormData ] = useState({
         email: "",
         password: "",
-        passwordConfirm: "",
-        user_type: "user" // "company"
     });
     // const [checkBoxStatus, setCheckBoxStatus] = useState(false)
     const [isSignup, setIsSignup] = useState(false);
     // const { login, user } = useContext(AuthContext);
     const emailRegExp = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
 
-    // const navigate = useNavigation()
+    const navigate = useNavigation()
     // console.log(JSON.stringify(navigate.getState(), null, 2));
     // React.useEffect(() => {
     //     if (user) {
@@ -54,22 +52,22 @@ export default function Auth() {
     }
 
     const handleSubmit = async () => {
-        if (formData.password === formData.passwordConfirm) {
-        }
-        if (formData.email.matchAll(emailRegExp)){
+
+        if (!formData.email.matchAll(emailRegExp)){
             Alert.alert('Failed', 'Email provided is not valid')
         }
+        navigate.navigate("/home")
         if (!isSignup) {
-            console.log("login")
-            const resp = await AuthService.login({email: formData.email.toLowerCase(), password: formData.password})
-            console.log(resp)
-            if (resp === "Unauthorized" || resp === "Forbidden") {
-                Alert.alert('Failed', 'Credentials provided are not valid')
-                // login({user: null, error: resp})
-                return;
-            }
-            login({user :JSON.parse(resp), error: null})
-            return;
+            // console.log("login")
+            // const resp = await AuthService.login({email: formData.email.toLowerCase(), password: formData.password})
+            // console.log(resp)
+            // if (resp === "Unauthorized" || resp === "Forbidden") {
+            //     Alert.alert('Failed', 'Credentials provided are not valid')
+            //     // login({user: null, error: resp})
+            //     return;
+            // }
+            // login({user :JSON.parse(resp), error: null})
+            // return;
         }
         // const resp = await AuthService.register({email: formData.email.toLowerCase(), password: formData.password, user_type: formData.user_type})
         // console.log("Im clicked")
