@@ -3,11 +3,9 @@ import { reqClient } from "./base";
 
 export const request = async (method, url, client, options) => {
     const onSuccess = (response) => {
-        console.log("Success", response.data)
         return response;
     };
     const onError = async (error) => {
-        console.log("Error", error.response.host);
         if (error?.response?.status === 401) {
             return "Unauthorized";
         }
@@ -23,7 +21,7 @@ export const request = async (method, url, client, options) => {
 
 export const authRequest = async ({ url, method, options }) =>
     request(method,url,"user", options);
-export const jobRequest = async ({ url, method, options }) =>
-    request(method,url,"job", options);
-export const paymentRequest = async ({ url, method, options }) =>
-    request(method,url,"payment", options);
+export const moodRequest = async ({ url, method, options }) =>
+    request(method,url,"mood", options);
+export const taskRequest = async ({ url, method, options }) =>
+    request(method,url,"tasks", options);

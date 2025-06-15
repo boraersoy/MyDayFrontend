@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "https://bermedical-dev-be.onrender.com/";
+export const BASE_URL = "https://moodtrackerapi.onrender.com/api/";
 
 export const reqClient = (method, url, client, options) => {
     switch(method.toLowerCase()) {
