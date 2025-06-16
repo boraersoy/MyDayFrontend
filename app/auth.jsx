@@ -29,6 +29,7 @@ export default function Auth() {
     const { updateMoodHistory } = useContext(HistoryContext)
     React.useEffect(() => {
         if (auth.isAuthenticated) {
+            console.log(auth.isAuthenticated, auth.user)
             router.replace("/home");
         }
     }, [auth.token])

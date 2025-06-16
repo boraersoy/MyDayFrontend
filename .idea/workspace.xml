@@ -4,63 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="690a3c79-0e36-413c-9beb-649f38822764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/requests/history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/requests/mood.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/requests/other.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/requests/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/history.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/stats.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/uplift.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/diary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/amazing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/angry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/anxious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/cool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/disgusted.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/embarassed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/graph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/like.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/loved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/neutral.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/peaceful.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/setting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/surprised.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/tired.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/macarons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/message.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ImgNull.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/MoodSelector.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/NavIconBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/MoodColors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/Stats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/AuthContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/Context.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/HistoryContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/mobileStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/requests/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/requests/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/oldHome.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/+not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/+not-found.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Colors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="ad1a9b5d-3e4c-4b32-8f02-8769f1c69399" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/constants/quotes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/history.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/stats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/uplift.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/uplift.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/MoodColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/MoodColors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/context/AuthContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mobileStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mobileStorage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,110 +27,47 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;UmutcanKara&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/boraersoy/MyDayFrontend.git&quot;,
-    &quot;accountId&quot;: &quot;8cc77648-1d9c-4143-8a8c-a68fe557c0fa&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2yBuBPIvbjfraqtAQIpANLXGz2p" />
+  <component name="ProjectId" id="2yVOCR5mO3iu0fqBZD4P9W90pa7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/barba/WebstormProjects/MyDayFrontend/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\barba\\WebstormProjects\\MyDayFrontend\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/home/umutcan/Documents/code/github-repos/freelance/formspark/MyDayFrontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="ReactDesignerToolWindowState">
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
-        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
-        <entry key="com.intellij.reactbuddy.storybook" value="false" />
-      </map>
-    </option>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\assets\images" />
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\components" />
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\app" />
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\assets\images\icons" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\assets\images" />
-      <recent name="C:\Users\barba\WebstormProjects\MyDayFrontend\assets\images\icons" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
-      </set>
-    </attachedChunks>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="690a3c79-0e36-413c-9beb-649f38822764" name="Changes" comment="" />
-      <created>1749320151229</created>
+      <changelist id="ad1a9b5d-3e4c-4b32-8f02-8769f1c69399" name="Changes" comment="" />
+      <created>1749916145427</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1749320151229</updated>
-      <workItem from="1749320152359" duration="1300000" />
-      <workItem from="1749321497352" duration="95000" />
-      <workItem from="1749731126621" duration="575000" />
-      <workItem from="1749731713457" duration="4068000" />
-      <workItem from="1749971069773" duration="24309000" />
-      <workItem from="1750014176605" duration="15592000" />
+      <updated>1749916145427</updated>
+      <workItem from="1749916146492" duration="683000" />
+      <workItem from="1749916831095" duration="18925000" />
+      <workItem from="1750065202829" duration="3754000" />
     </task>
     <servers />
   </component>

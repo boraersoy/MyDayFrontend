@@ -107,6 +107,8 @@ export default WithNavbar(function HomeScreen() {
         }))
     }
 
+    console.log(user)
+
     const onConfirmMood = async (mood: string) => {
         if (formData.reason === ""|| formData.description === "") {
             Alert.alert("Please fill in all fields before confirming your mood.");
@@ -147,7 +149,7 @@ export default WithNavbar(function HomeScreen() {
                 TestMoodList.map((mood, index) => {
                     const days = ["Sat", "Sun", "Mon"]
                     return (
-                        <StyledView key={index} style={{backgroundColor: mood.bg, ...styles.card}}>
+                        <StyledView key={index} style={{backgroundColor: mood?.bg, ...styles.card}}>
                             <StyledText style={{color: mood.color}} type="body">Jun</StyledText>
                             <StyledText style={{color: mood.color}} type="body">{14 + index}</StyledText>
                             <StyledText style={{color: mood.color}} type="body">{days[index]}</StyledText>
@@ -168,10 +170,11 @@ export default WithNavbar(function HomeScreen() {
         <StyledView style={styles.mainContainer}>
 
             {
-                image.next !== null ? <Image style={styles.image} source={{uri: `${imgCdn}${image.next}`}}/>: <Image style={styles.image} source={require('@/assets/images/macarons.png')}/>}
+                image.next !== null ? <Image style={{...styles.image, left: 50, bottom: 50}} source={{uri: `${imgCdn}${image.next}`}}/>: <Image style={styles.image} source={{
+                    uri: `${imgCdn}/bitmojis/${user.avatar_gender}/${user.avatar_age}/20087692.png` }}/>}
 
 
-            <StyledView style={{...styles.reasonContainer, backgroundColor: image.next ? MoodColors[confirmedMood.toLowerCase()].bg : '#E0E0E0'}}>
+            <StyledView style={{...styles.reasonContainer, backgroundColor: image.next ? MoodColors[confirmedMood.toLowerCase()]?.bg : '#E0E0E0'}}>
                 <StyledText style={{...styles.greyText, ...styles.titleText}}>Why are you feeling this way?</StyledText>
                 <StyledView style={styles.reason}>
                     <StyledText style={{...styles.greyText}}>Because of:</StyledText>
@@ -242,6 +245,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 400,
+        height: 300,
         objectFit: 'contain',
     },
 

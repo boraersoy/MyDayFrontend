@@ -47,6 +47,7 @@ export const AuthProvider = ({ children }) => {
             logout();
             return;
         }
+        console.log(resp)
         setUser(resp.user);
         setToken(resp.token);
         await setData("user", resp.user)
@@ -70,13 +71,17 @@ export const AuthProvider = ({ children }) => {
     };
 
 
-    const logout = () => {
+    const logout = async () => {
         setUser(null);
         setToken(null);
+        await setData("user", "rm");
+        await setData("token", "rm");
+        await setData("moodHistory", null);
+        await setData("lastMood", null);
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, logout, register, isAuthenticated: !!user, token, error }}>
+        <AuthContext.Provider value={{ user, login, logout, register, isAuthenticated: user ? true : false , token, error }}>
             {children}
         </AuthContext.Provider>
     );

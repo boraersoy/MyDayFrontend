@@ -44,7 +44,7 @@ export default WithNavbar(function History() {
     const [date, setDate] = React.useState(new Date());
 
     const { moodHistory, updateMoodHistory } = React.useContext(HistoryContext);
-    const { token } = React.useContext(AuthContext);
+    const { token, user } = React.useContext(AuthContext);
 
     React.useEffect(() => {
         if (!dateStr){
@@ -112,7 +112,7 @@ export default WithNavbar(function History() {
             </TouchableOpacity>
         </StyledView>
         {
-            view === "Calendar" ? <Calendar date={date} /> : <Diary history={moodHistory} />
+            view === "Calendar" ? <Calendar date={date} email={user?.email} /> : <Diary history={moodHistory} />
         }
     </StyledView>
 },3)
@@ -134,7 +134,7 @@ const randomColors = {
 
 
 
-function Calendar({ date }) {
+function Calendar({ date, email }) {
     const [layout, setLayout] = React.useState({
         height: 0,
         width: 0
@@ -182,6 +182,7 @@ function Calendar({ date }) {
                             idx = "";
                         }
                         let color = idx ? MoodColors[idx.toLowerCase()].bg: ""
+                        color = email === "sb@example.com" ? color : MoodColors.unknown.bg
 
                         let style = {
                             width: (layout.width -70) /7,

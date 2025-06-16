@@ -53,8 +53,8 @@ export let TestMoodList = [
     {
         id: 2,
         name: 'Sad',
-        color: MoodColors.sad.color,
-        bg: MoodColors.sad.bg,
+        color: MoodColors.anxious.color,
+        bg: "#C5B6D0",
     },
     {
         id: 3,

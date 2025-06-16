@@ -6,6 +6,7 @@ import {StyledText} from "@/components/StyledText";
 import {StyledView} from "@/components/StyledView";
 import WithNavbar from "@/components/ui/NavIconBar";
 import {STATS} from "@/constants/Stats";
+import {AuthContext} from "@/context/AuthContext";
 
 
 const screenWidth = Dimensions.get('window').width;
@@ -14,10 +15,16 @@ export default WithNavbar(function Stats() {
   const [activeRange, setActiveRange] = useState('Custom');
   const [filteredStats, setFilteredStats] = useState(STATS);
 
+  const { user } = React.useContext(AuthContext)
+  console.log(user)
+
   React.useEffect(() => {
     // Filter stats based on the active rang
 
     const filterStats = () => {
+      if (user && user.email !== "sb@example.com") {
+        return []
+      }
       if (activeRange === 'This Week') {
         return STATS.filter(stat => new Date(stat.created_at) >= new Date(new Date().setDate(new Date().getDate() - 7)));
       } else if (activeRange === 'Last Week') {
@@ -140,12 +147,16 @@ export default WithNavbar(function Stats() {
         />
 
         {/* Stats Text */}
+        {
+         filteredStats.length === 0 ? null : <>
         <StyledText style={styles.statLine}>
           😢 You were mostly sad because of <StyledText style={styles.bold}>Work</StyledText>.
         </StyledText>
         <StyledText style={styles.statLine}>
           😄 This week was the <StyledText style={styles.bold}>happiest</StyledText> week.
         </StyledText>
+         </>
+        }
       </ScrollView>
 
 

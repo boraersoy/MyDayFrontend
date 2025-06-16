@@ -7,61 +7,33 @@ import {Colors} from "../constants/Colors";
 import {Link} from "expo-router";
 import WithNavbar from "../components/ui/NavIconBar";
 import {HistoryContext} from "../context/HistoryContext";
-import {AuthContext} from "../context/AuthContext";
-import {BASE_URL} from "../api/config/base";
+
+import {filterQuotes, quotes} from "../constants/quotes";
+import {filterTasks, tasks} from "../constants/tasks";
 
 export default WithNavbar(function Uplift(){
-    const [text, setText] = React.useState({
-        quote: "",
-        task: "",
-    });
-    const [loading, setLoading] = React.useState(true);
     const { lastAddedMood } = React.useContext(HistoryContext);
-    const { token } = React.useContext(AuthContext);
+    const [text] = React.useState({
+        quote: Math.floor(Math.random() * filterQuotes(lastAddedMood && lastAddedMood.mood ? lastAddedMood.mood.mood : "").length),
+        task: Math.floor(Math.random() * filterTasks(lastAddedMood && lastAddedMood.mood ? lastAddedMood.mood.mood : "").length),
+    });
 
-    React.useEffect(()=>{
-        const fetchData = async () => {
-            let quoteRespRaw = await fetch(`${BASE_URL}tasks?mood_type=${lastAddedMood.mood.mood.toLowerCase()}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-            let taskRespRaw = await fetch(`${BASE_URL}quotes?mood_type=${lastAddedMood.mood.mood.toLowerCase()}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-
-            let quote = await quoteRespRaw.json();
-            let task = await taskRespRaw.json();
-            console.log("quote : ", quote,"\nTask : ", task);
-            setText({quote: quote.text, task: task.text})
-            setLoading(false);
-        }
-        if (lastAddedMood.mood.mood) {
-        }
-        fetchData();
-    },[lastAddedMood]);
 
     return (
         <StyledView style={styles.container}>
             {
-                lastAddedMood.mood.mood
-                    ? loading ? <ActivityIndicator size="large" /> : <>
+                lastAddedMood && lastAddedMood.mood
+                    ? <>
                     <StyledView style={styles.container}>
-                        <StyledText style={styles.title}>Hey, I see that you&#39;re {lastAddedMood.mood.mood.toLowerCase()}. Let&#39;s try something together</StyledText>
+                        <StyledText style={styles.title}>Hey, I see that you&#39;re {lastAddedMood?.mood?.mood.toLowerCase()}. Let&#39;s try something together</StyledText>
                         <StyledView style={styles.upliftContainer}>
                             <Image style={styles.image} source={require("../assets/images/bitmojis/female/young/uplift_young_woman.png")} />
                             <StyledView style={{display: "flex", flexDirection:"column", gap: 0}}>
                                 <StyledText style={{...styles.title, color: "#7B7B7B", fontSize: 16, fontWeight: "bold", marginBottom: "10"}}>Todays Challange : </StyledText>
-                                <StyledText style={styles.text}>{text.task} </StyledText>
+                                <StyledText style={styles.text}>{tasks[text.task].text} </StyledText>
                             </StyledView>
                         </StyledView>
-                        <StyledText style={styles.quote}>{text.quote}</StyledText>
+                        <StyledText style={styles.quote}>{quotes[text.quote].text}</StyledText>
                     </StyledView>
                     </>
                     : <>

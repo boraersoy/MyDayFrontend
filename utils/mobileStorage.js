@@ -3,6 +3,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function setData(key, value, callback){
     try {
+        if (value === "rm") {
+            await AsyncStorage.removeItem(key)
+            return
+        }
         await AsyncStorage.setItem(key, JSON.stringify(value));
     }
     catch (error) {

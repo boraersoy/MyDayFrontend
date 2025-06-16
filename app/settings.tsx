@@ -14,6 +14,7 @@ const profileImage = require('@/assets/images/calendar.png'); // Adjust the path
 
 
 export default WithNavbar(function Settings() {
+  const pp= "https://cdn.jsdelivr.net/gh/eyezkes/Avatars@main/bitmojis/female/young/32261991.png"
   const { logout } = React.useContext(AuthContext);
   let router = useRouter();
 
@@ -21,12 +22,13 @@ export default WithNavbar(function Settings() {
     await logout();
     router.replace("/auth")
   }
+  console.log(pp)
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
         {/* Avatar and Title */}
         <View style={styles.header}>
-  <Image source={profileImage} style={{ width: 64, height: 64, borderRadius: 32 }} />
+  <Image source={{uri : pp}} style={{ width: 64, height: 64, borderRadius: 32 }} />
           <StyledText style={styles.title}>Edit Profile</StyledText>
         </View>
 
